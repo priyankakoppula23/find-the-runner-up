@@ -1,0 +1,16 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+    
+    mx = float('-inf')
+    second_max = float('-inf')
+
+        
+    for num in arr:
+        if num > mx:
+            second_max = mx
+            mx = num
+        elif num > second_max and num != mx:
+            second_max = num
+    
+    print(second_max)
